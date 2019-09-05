@@ -163,7 +163,7 @@ let protocolObject = object.getDescription
 print(protocolObject)
 
 
-// Mark: Experiment 15 (Simple loops)
+// Mark: Experiment 15 (Simple loop)
 var str = "Fakers gonna"
 
 for _ in 1 ... 5 {
@@ -172,3 +172,14 @@ for _ in 1 ... 5 {
 
 print(str)
 
+// Mark: Experiment 16 (While loop)
+var age = 0
+
+while true {
+    print("Your age is now \(age)")
+    age += 3
+    
+    if age >= 28 {
+        break
+    }
+}
