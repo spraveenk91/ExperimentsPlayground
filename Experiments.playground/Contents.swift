@@ -183,3 +183,30 @@ while true {
         break
     }
 }
+
+// Mark: Experiment 17 (Switch statement with range values)
+
+let yourAge: Double = 28
+
+switch yourAge {
+case 0...3:
+    print("Infancy")
+case 4...6:
+    print("Early Childhood")
+case 7...8:
+    print("Middle Childhood")
+case 9...11:
+    print("Late Childhood")
+case 12...20:
+    print("Adolescence")
+case 21...35:
+    print("Early Adulthood")
+case 36...50:
+    print("Midlife")
+case 51...80:
+    print("Mature Adulthood")
+case 81...Double.infinity:
+    print("Late Adulthood")
+default:
+    print("You have to born to get ages 😉")
+}
