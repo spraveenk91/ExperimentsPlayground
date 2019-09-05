@@ -72,7 +72,7 @@ print(personCountry("India"))
 func askAnything(anything: [Any]) -> (integerValue: Int, stringValue: String, doubleValue: Double) {
     return (anything[0] as! Int, anything[1] as! String, anything[2] as! Double)
 }
-let anyValues = askAnything(anything: [70, "This is Praveen", 5.8])
+let anyValues = askAnything(anything: [70, "This is Praveen", 5.10])
 print("\(anyValues.1), My Height: \(anyValues.2) and My Weight: \(anyValues.integerValue)")
 
 
@@ -99,6 +99,68 @@ let finalResult = numbers.map ({ (number: Int) -> Int in
 })
 print(finalResult)
 
+
+//Mark: Experiment 12 (Simple class creation)
+class Industry {
+    func detectDomain(_ personName: String, _ domainName: String) -> String {
+        return "Hey i am \(personName) and i am from the \(domainName) domain"
+    }
+}
+var industry = Industry()
+industry.detectDomain("PraveenKumar", "Mobile Application Development")
+
+
+//Mark: Experiment 13 (Enum)
+enum Shape {
+    case triangle, circle, rectangle, oval
+    func description() -> String {
+        switch self {
+        case .triangle:
+            return "Triangle"
+        case .circle:
+            return "Circle"
+        case .rectangle:
+            return "Rectangle"
+        case .oval:
+            return "Oval"
+        }
+    }
+    
+    func colorOfTheShape() -> String {
+        switch self {
+        case .triangle:
+            return "Red"
+        case .circle:
+            return "Green"
+        case .rectangle:
+            return "Black"
+        case .oval:
+            return "Yellow"
+        }
+    }
+}
+
+let newShape = Shape.rectangle
+let newShapeColor = Shape.rectangle.colorOfTheShape()
+
+
+// Mark: Experiment 14 (Simple protocol)
+protocol SampleProtocol {
+    var getDescription: String { get }
+    mutating func sampleMethod()
+}
+
+class SampleClass: SampleProtocol {
+    var getDescription: String = "This is a class description"
+    func sampleMethod() {
+        getDescription += " & Additional string added"
+    }
+}
+
+var object = SampleClass()
+object.sampleMethod()
+let protocolObject = object.getDescription
+print(protocolObject)
 
 
 
