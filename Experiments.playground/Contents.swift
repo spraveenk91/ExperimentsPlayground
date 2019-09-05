@@ -163,4 +163,12 @@ let protocolObject = object.getDescription
 print(protocolObject)
 
 
+// Mark: Experiment 15 (Simple loops)
+var str = "Fakers gonna"
+
+for _ in 1 ... 5 {
+    str += " fake"
+}
+
+print(str)
 
